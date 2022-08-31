@@ -45,6 +45,10 @@ print("Hi! Python here, do you miss R already?")
 # note that they must be empty and the names must correspond
 ```
 
+```{r}
+ 
+```
+
 For this dataset the Bank of England asked `r prettyNum(nrow(inflation), big.mark = ".", decimal.mark = ",")` people for their opinion on the perceived and expected inflation.
 The survey has run quarterly since `r min(inflation$year)`.
 
@@ -58,5 +62,9 @@ inflation %>%
   ungroup() %>% 
   ggplot() +
   geom_line(aes(date, value, color = name)) +
+  theme_minimal() +
+  ylab("subjective inflation in %-points") +
+  labs(color = "") +
+  theme(legend.position = c(.1, .9)) 
   NULL
 ```
