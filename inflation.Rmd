@@ -36,9 +36,6 @@ I quote:
 with(mtcars, plot(hp, mpg))
 ```
 
-```{python}
-print("Hi! Python here, do you miss R already?")
-```
 
 ```{r transform-inflation}
 # this chunk is also loaded from the same script
